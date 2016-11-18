@@ -1,12 +1,30 @@
 ---
 layout: default
-title: Hank Quinlan's Blog
+title: Dizzy's Blog
+description: The Blog.
 ---
-<h1>{{ page.title }}</h1>
-<ul class="posts">
+<pre>
 
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-  {% endfor %}
-    
-</ul>
+[-]==========================================================================[-]
+                    __max's ____________  _____ ____________
+                   /  _/ | / / ____/ __ \/ ___// ____/ ____/
+                   / //  |/ / /_  / / / /\__ \/ __/ / /
+                 _/ // /|  / __/ / /_/ /___/ / /___/ /___
+                /___/_/ |_/_/    \____//____/_____/\____/
+                                                  blog
+[-]==========================================================================[-]
+
+     |=--------------------------------------------------------------------=|
+     | "And then it happened... a door opened to a world...                 |
+     | rushing through the phone line like heroin through an addict's veins,|
+     | an electronic pulse is sent out, a refuge from the day-to-day        |
+     | incompetencies is sought..."                                         |
+     |=-----------------------------------------=[ +++The Mentor+++ ]=-----=|
+</pre>
+
+    <ul class="posts">
+
+        {% for post in site.posts %}
+        <li><a <span> {{ post.number }}</span></a> <a> -- </a> <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
