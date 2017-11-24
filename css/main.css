@@ -6,7 +6,7 @@ body {
 nav ul, footer ul {
     font-family: monospace;
     padding: 0px;
-    list-style: none;
+    list-style: circle;
     color: #43f7b9;
 }
 nav ul li, footer ul li {
@@ -55,7 +55,8 @@ ul.posts {
 }
 
 ul.posts li {
-    list-style: none;
+    list-style: circle;
+    color: #43f7b9;
 }
 
 img.displayed {
