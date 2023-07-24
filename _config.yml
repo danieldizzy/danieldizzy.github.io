@@ -1,5 +1,8 @@
 name: Daniel Dizzy
+title: Dizzy's homepage
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 gems:
  - jekyll-sitemap
+description: Bookmark this to keep an eye on my project updates!
+
