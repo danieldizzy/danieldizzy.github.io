@@ -2,7 +2,26 @@ name: Daniel Dizzy
 title: Dizzy's homepage
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
-gems:
+plugins:
  - jekyll-sitemap
 description: Bookmark this to keep an eye on my project updates!
 
+# Site settings
+author: Daniel Dizzy
+email: your-email@example.com
+url: "https://danieldizzy.github.io"
+baseurl: ""
+
+# Build settings
+highlighter: rouge
+incremental: false
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
