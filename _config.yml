@@ -4,7 +4,7 @@ markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 plugins:
  - jekyll-sitemap
-description: Bookmark this to keep an eye on my project updates!
+description: Wireless Compliance Test Engineer & Penetration Tester - Cybersecurity insights and technical tutorials
 
 # Site settings
 author: Daniel Dizzy
