@@ -1,62 +1,172 @@
+/* Base Styles */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 60px auto;
     width: 70%;
+    max-width: 900px;
+    min-height: 100vh;
     background-color: #1d1f21;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    line-height: 1.6;
+    transition: all 0.3s ease;
 }
+
+/* Navigation */
 nav ul, footer ul {
     font-family: monospace;
     padding: 0px;
-    list-style: circle;
+    list-style: none;
     color: #43f7b9;
+    margin: 20px 0;
 }
+
 nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
     color: #43f7b9;
+    position: relative;
 }
+
+nav ul li:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+}
+
+/* Links */
 a {
     text-decoration: none;
-    font-size:14px;
+    font-size: 14px;
     font-family: monospace;
     color: #43f7b9;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
 }
+
 a:hover {
-    text-decoration: underline;
+    color: #5fff8a;
+    border-bottom: 1px solid #43f7b9;
+    text-shadow: 0 0 5px rgba(67, 247, 185, 0.3);
 }
+
 a.lic {
     font-size: 12px;
     color: #43f7b9;
 }
+
+/* Typography */
 b {
     font-size: 14px;
     color: #43f7b9;
     font-family: monospace;
 }
+
 h1 {
-    font-size: 14px;
+    font-size: 18px;
     font-family: monospace;
     color: #43f7b9;
+    margin: 30px 0 20px 0;
+    text-shadow: 0 0 10px rgba(67, 247, 185, 0.2);
 }
+
+h2 {
+    font-size: 16px;
+    font-family: monospace;
+    color: #43f7b9;
+    margin: 25px 0 15px 0;
+    border-left: 3px solid #43f7b9;
+    padding-left: 10px;
+}
+
+h3 {
+    font-size: 15px;
+    font-family: monospace;
+    color: #43f7b9;
+    margin: 20px 0 10px 0;
+}
+
 p {
     font-size: 14px;
     font-family: monospace;
-    line-height: 1.4em;
+    line-height: 1.6em;
     font-weight: 400;
     color: #ffffff;
-}
-footer {
-    border-top: 1px solid #ffffff;
-    font-size: .8em;
+    margin: 15px 0;
 }
 
+/* Content Areas */
+.blurb {
+    background: rgba(67, 247, 185, 0.05);
+    border: 1px solid rgba(67, 247, 185, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.projects {
+    margin: 20px 0;
+}
+
+.project-item {
+    background: rgba(67, 247, 185, 0.05);
+    border: 1px solid rgba(67, 247, 185, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.project-item:hover {
+    border-color: #43f7b9;
+    box-shadow: 0 5px 20px rgba(67, 247, 185, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.8em;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+/* Blog Posts */
 ul.posts {
     margin: 20px auto 40px;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    padding: 0;
 }
 
 ul.posts li {
-    list-style: circle;
+    list-style: none;
     color: #43f7b9;
+    margin: 15px 0;
+    padding: 10px;
+    background: rgba(67, 247, 185, 0.05);
+    border-left: 3px solid #43f7b9;
+    border-radius: 0 5px 5px 0;
+    transition: all 0.3s ease;
+}
+
+ul.posts li:hover {
+    background: rgba(67, 247, 185, 0.1);
+    transform: translateX(5px);
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 20px rgba(67, 247, 185, 0.2);
 }
 
 img.displayed {
@@ -64,19 +174,111 @@ img.displayed {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* Code Blocks */
 code {
-    font-size: 15px;
-    font-family: monospace;
+    font-size: 13px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     line-height: 1.4em;
     font-weight: 500;
     background: #073642;
     color: #859900;
-    padding: 3px;
+    padding: 4px 6px;
+    border-radius: 3px;
+    border: 1px solid rgba(67, 247, 185, 0.2);
 }
+
 pre {
-    font-size: 14px;
-    font-family: monospace;
+    font-size: 13px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     line-height: 1.4em;
     font-weight: 400;
     color: #ffffff;
+    background: #073642;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(67, 247, 185, 0.2);
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+pre code {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        width: 90%;
+        margin: 30px auto;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .blurb, .project-item {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 16px;
+    }
+    
+    p, a, code {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        width: 95%;
+        margin: 20px auto;
+    }
+    
+    .blurb, .project-item {
+        padding: 10px;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus states for accessibility */
+a:focus, button:focus {
+    outline: 2px solid #43f7b9;
+    outline-offset: 2px;
+}
+
+/* Selection styling */
+::selection {
+    background: rgba(67, 247, 185, 0.3);
+    color: #ffffff;
+}
+
+/* Scrollbar styling for webkit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1d1f21;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #43f7b9;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5fff8a;
 }
